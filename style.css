@@ -1,0 +1,661 @@
+/* SIMPLE CLEAN REUSABLE PROPERTIES FOR STUDENT CODING SESSIONS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+/* GLOBAL HEADER FONTS SETUP */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff5722; /* Changed color accent from blue to warm vibrant orange to create difference */
+    margin: 55px 0 25px 0;
+    letter-spacing: 0.5px;
+}
+
+/* FLEX NAVIGATION ENGINE */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 45px;
+    background: #ffffff;
+    border-bottom: 2px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #e74c3c;
+    text-transform: lowercase;
+}
+
+.logo span {
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    color: #ff5722;
+}
+
+/* CONDITIONAL POPUP DROPDOWN NAV CONFIGURATION */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 12px 0;
+    min-width: 160px;
+    display: none;
+}
+
+.dropdown-menu li a {
+    padding: 6px 15px;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.btn-buy {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 4px; /* Changed border radius to rectangle edges to differ from original circles */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CANVAS HERO CONTAINER BRICKS (Ref: image.jpg top block) */
+.hero {
+    height: 65vh;
+    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
+                url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    color: #ffffff; /* Changed heading text from dark to crisp premium white */
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #ff5722;
+    margin-top: 5px;
+}
+
+/* ABOUT US 3-COLUMN LAYOUT SYNC (Ref: image.jpg Row of 3 blocks) */
+.about-section {
+    padding: 40px 8%;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 picture boxes in a single horizontal row */
+    gap: 30px;
+}
+
+.about-card {
+    background: #ffffff;
+}
+
+.about-card .img-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border-radius: 6px; /* Added slight corners to give student aesthetic touch */
+}
+
+.about-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    color: #e67e22;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about-card h3 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin: 6px 0;
+}
+
+.about-card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.learn-more {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* PROMOTIONAL PERCENTAGE BANNER VIEW STRIP */
+.sale-banner {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1600') no-repeat center center/cover;
+    height: 38vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.sale-content h2 {
+    font-size: 2.5rem;
+    margin: 8px 0 18px 0;
+    font-weight: 800;
+}
+
+.btn-watch {
+    background: #ffffff;
+    color: #ff5722;
+    border: none;
+    padding: 12px 28px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+/* SIDEBAR LAYOUT SPLIT FOR FEATURES */
+.features-section {
+    padding: 55px 8%;
+    display: flex;
+    gap: 35px;
+    background-color: #fdfdfd;
+}
+
+.features-sidebar {
+    flex: 1;
+}
+
+.features-sidebar h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.features-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 15px;
+}
+
+.feature-icon {
+    font-size: 1.6rem;
+    color: #ff5722;
+}
+
+.feature-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: #2c3e50;
+}
+
+.feature-text p {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+/* CATALOGUE 4 ITEM COLUMN BLOCKS (Ref: image.jpg grid of 4) */
+.products-section {
+    padding: 40px 8%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Exact row configuration for 4 items */
+    gap: 20px;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-img {
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.product-overlay span {
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-card h3 {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    margin-top: 5px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* SUBSCRIBE NEWSLETTER BAR LAYER */
+.subscribe-section {
+    padding: 55px 8%;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 300px;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 11px 10px 11px 35px;
+    border: 1px solid #bdc3c7;
+    outline: none;
+}
+
+.btn-subscribe {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ASYMMETRIC OVERLAY BOX IMAGE COVERS (Ref: image.jpg) */
+.gallery-section {
+    padding: 30px 8%;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 15px;
+    height: 420px;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item.large {
+    flex: 1.4;
+}
+
+.gallery-item-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gallery-item.small {
+    flex: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.gallery-tag {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.btn-buy-now {
+    background: #ff5722;
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* STUDIO BLOG CARDS BLOCKS (3 Columns Layout - Ref: image.jpg) */
+.news-section {
+    padding: 40px 8%;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Side by side cards engine alignment */
+    gap: 25px;
+}
+
+.news-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.news-card h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.news-link {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* INSTAGRAM FEED LOOKBOOK CARDS (6 Columns Row Layout) */
+.collection-section {
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.collection-sub {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 grid tracks perfectly arranged horizontally */
+    gap: 10px;
+}
+
+.collection-img {
+    position: relative;
+    height: 240px;
+}
+
+.collection-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 87, 34, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.social-hover i {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.collection-card:hover .social-hover {
+    opacity: 1;
+}
+
+/* USER REVIEWS BLOCK INDEX CARDS */
+.testimonials-section {
+    padding: 55px 8%;
+    background-color: #fafafa;
+}
+
+.testimonials-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.slider-arrow {
+    background: #e2e8f0;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #4a5568;
+}
+
+.testimonial-card {
+    text-align: center;
+}
+
+.testimonial-card .avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #4a5568;
+}
+
+/* OUTLET BRANCHES MAP INTERFACE HOUSING SECTION */
+.location-section {
+    padding: 40px 8%;
+}
+
+.location-container {
+    display: flex;
+    gap: 30px;
+}
+
+.location-info {
+    flex: 1;
+}
+
+.info-group {
+    margin-bottom: 18px;
+}
+
+.map-link {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.map-wrapper {
+    flex: 1.4;
+    height: 280px;
+}
+
+.map-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+}
+
+/* GLOBAL SITE COMPREHENSIVE FOOTER STRUCTURE */
+.main-footer {
+    padding: 50px 8% 20px 8%;
+    border-top: 1px solid #e2e8f0;
+    background-color: #ffffff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-about p {
+    color: #718096;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+.footer-links h3 {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 6px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #718096;
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.75rem;
+    color: #a0aec0;
+}
+
+/* BREAKPOINT CONFIGURATIONS FOR SMALL SCREEN RENDERS */
+@media (max-width: 992px) {
+    .about-grid, .news-grid { grid-template-columns: 1fr 1fr; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .collection-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 12px; }
+    .about-grid, .products-grid, .news-grid, .collection-grid, .features-section, .location-container, .gallery-container, .footer-grid { 
+        display: flex;
+        flex-direction: column; 
+        height: auto;
+    }
+}
